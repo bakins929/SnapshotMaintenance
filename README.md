@@ -6,10 +6,10 @@ Snapshots with special naming are deleted based on the name.
 e.g.: A snaphot named PROTECTED-15 would be retained for 15 days before deletion.
 
 Contacts are notified 1 day prior to deletion based on Contact tags assigned to the vm.
-Contact tags are of this type:
 
-Name                           Category                       Description                                               
-BAkins929                      Contact                        My.Email@myCompany.com
+Contact tags are of this type:
+Name        Category        Description                                               
+BAkins929   Contact         My.Email@myCompany.com
 
 
 Tested with the following modules:
@@ -36,16 +36,11 @@ Script     6.5.1.7862888   VMware.VumAutomation             {Add-EntityBaseline,
 
 
 Things you need to set:
-vCenter credentials
-
-$retentionDate
-
-From address
-
-SmtpServer
-
-Verbiage in the email sent.
-
-Default email if none found
+    vCenter credentials
+    $retentionDate
+    From address
+    SmtpServer
+    Verbiage in the email sent.
+    Default email if none found
 
 That should do it.

@@ -1,7 +1,7 @@
 <#
     .NOTES
 	===========================================================================
-	Created by:		
+	Created by:		Bill Akins
 	Date:			July 28, 2020
 	Version:		1.6
 	===========================================================================
@@ -25,14 +25,22 @@
                     1) If no contact, set contact to vmware admins
                     2) send email
     
-        NOTE:  Contacts are gathered through VMware tags of type Contact.  Name field contains contact name, Description field contains email address.
+		NOTE:  Contacts are gathered through VMware tags of type Contact.  Name field contains contact name, Description field contains email address.
+		
     ---------------------------------------------------------------------------
 	.DESCRIPTION
         Automation of snapshot cleanup.
 
     --------------------------------------------------------------------------- 
 	.NOTES
-		
+		Several variables need to be set for your use case:
+		vCenter credentials
+		$retentionDate
+		From address
+		SmtpServer
+		Verbiage in the email sent.
+		Default email if none found
+
     ---------------------------------------------------------------------------
 	.TROUBLESHOOTING
 		
