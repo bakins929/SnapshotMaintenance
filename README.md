@@ -1,5 +1,6 @@
 # SnapshotMaintenance
 PowerCLI script to clean up snapshots based on age/name.
+Apparently I cannot figure out MD...
 
 Snapshots with regular naming are deleted based on variable $retentionDate
 Snapshots with special naming are deleted based on the name.
@@ -9,13 +10,13 @@ Contacts are notified 1 day prior to deletion based on Contact tags assigned to 
 
 Contact tags are of this type:
 Name | Category | Description | 
------|----------|-------------|-
+-----|----------|-------------|
 BAkins929 | Contact | My.Email@myCompany.com
 
 
 Tested with the following modules:
 ModuleType Version | Name | ExportedCommands | 
--------------------|------|------------------|-
+-------------------|------|------------------|
 ---------- ------- | ---- | ---------------- | 
 Script | 1.0.0.0 | ISE | {Get-IseSnippet, Import-IseSnippet, New-IseSnippet} | 
 Manifest | 3.1.0.0 | Microsoft.PowerShell.Management | {Add-Computer, Add-Content, Checkpoint-Computer, Clear-Content...} | 
@@ -37,6 +38,7 @@ Script | 6.5.1.7862888 | VMware.VumAutomation | {Add-EntityBaseline, Copy-Patch,
 
 
 Things you need to set:
+
     * vCenter credentials
     * $retentionDate
     * From address
