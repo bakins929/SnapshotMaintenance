@@ -1,4 +1,4 @@
-<#
+﻿<#
     .NOTES
 	===========================================================================
 	Created by:		Bill Akins
@@ -104,14 +104,12 @@ function notifyContacts {
 		if ($address -notlike "*@myCompany.com") {
 			$contact = "vmware.admins@myCompany.com"
 		}
-
+		$mailMap = @{
+			"warn" = ([string]"The protected snapshot $($snap.Name), found on $($vm.Name) is $snapAge days old and will be deleted tomorrow.<br><br>If you have a <b><i>business need</i></b> to extend the snapshot retention, please open a work order ASAP and assign it to Infrastructure Converged.<br>Do not reply to this email.<br><br><br><i>NOTE:</i> Protected snapshot retention requires management approval.")
+			"delete" = ([string]"This is a courtesy reminder.<br><br>Snapshot $($snap.Name), found on $($vm.Name) will be deleted tomorrow.")
+		}
 		sendEmail
 	}
-}
-
-$mailMap = @{
-	"warn" = ([string]"The protected snapshot $($snap.Name), found on $($vm.Name) is $snapAge days old and will be deleted tomorrow.<br><br>If you have a <b><i>business need</i></b> to extend the snapshot retention, please open a work order ASAP and assign it to Infrastructure Converged.<br>Do not reply to this email.<br><br><br><i>NOTE:</i> Protected snapshot retention requires management approval.")
-	"delete" = ([string]"This is a courtesy reminder.<br><br>Snapshot $($snap.Name), found on $($vm.Name) will be deleted tomorrow.")
 }
 
 
