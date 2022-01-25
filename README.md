@@ -8,7 +8,7 @@ e.g.: A snaphot named PROTECTED-15 would be retained for 15 days before deletion
 
 Contacts are notified 1 day prior to deletion based on Contact tags assigned to the VM.  
 
-Contact tags are of Catagory Contact where Description contains email address:
+Contact tags are of Category Contact where Description contains email address:
 Name | Category | Description | 
 -----|----------|-------------|
 First Last | Contact | My.Email@myCompany.com
